@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": ["standard"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
+    "no-multi-spaces": ["error"],
+    "semi": [2, "always"],
+    "max-len": [2, {"code": 80, "tabWidth": 2}],
+    "space-before-function-paren": ["error", "never"],
+    "no-console": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-unused-vars": "warn"
+  }
 }
